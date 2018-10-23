@@ -1,0 +1,22 @@
+---
+- name: modify the motd in the cisco routers
+  hosts: cisco
+  connection: network_cli
+  gather_facts: false
+
+  vars: 
+   banner_message: > 
+     Property of FinTech Inc. 
+     No unauthorized access 
+     Violators will be prosecuted
+  
+  tasks:
+  - name: backup task in current folder
+    ios_banner: 
+      banner: motd
+  #    text: " {{ banner_message }} %"
+      text: |
+         Property of FinTech Inc.
+         No unauthorized access
+         Violators will be prosecuted
+      state: present

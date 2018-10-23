@@ -1,0 +1,11 @@
+---
+- name: backup cisco routers
+  hosts: cisco
+  connection: network_cli
+  gather_facts: false
+  
+  tasks:
+  - name: backup task in current folder
+    ios_config:
+      backup: yes
+

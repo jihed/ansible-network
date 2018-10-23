@@ -1,0 +1,5 @@
+- import_playbook: playbooks/ios_backup.yml
+- import_playbook: playbooks/banner.yml
+- import_playbook: playbooks/cisco_gather_facts.yml  
+- import_playbook: playbooks/gre.yml
+- import_playbook: playbooks/router-config.yml
